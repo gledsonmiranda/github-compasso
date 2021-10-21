@@ -1,0 +1,28 @@
+:root {
+  --gray-100: #f2f2f2;
+  --gray-300: #323232;
+  --gray: #252525;
+  --yellow: #F7B718;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, input, textarea {
+  font: 400 16px 'Roboto', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}

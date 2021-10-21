@@ -1,0 +1,50 @@
+.header {
+  height: 80px;
+  background: var(--gray);
+}
+
+.container {
+  height: 100%;
+  max-width: 980px;
+  padding: 0 16px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    margin-right: 30%;
+  }
+
+  img {
+    width: 180px;
+  }
+
+  form {
+    flex: 1;
+    .inputWrapper {
+      width: 100%;
+      height: 32px;
+      background: #fff;
+      border-radius: 2px;
+      display: flex;
+
+      input {
+        flex: 1;
+        height: 100%;
+        border: 0;
+        padding: 8px;
+        font-size: 14px;
+        outline: none;
+      }
+
+      button {
+        width: 32px;
+        margin-right: 8px;
+        border: 0;
+        background: transparent;
+      }
+    }
+  }
+}
