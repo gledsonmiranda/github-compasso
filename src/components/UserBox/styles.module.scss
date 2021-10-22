@@ -1,3 +1,36 @@
+.topInfo {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    font-size: 16px;
+    color: var(--gray-100);
+    text-align: center;
+
+    span {
+      color: var(--yellow);
+    }
+  }
+
+  button {
+    background: transparent;
+    border: 0;
+    color: var(--gray-100);
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .userBox {
   border: 2px solid #585858;
   border-radius: 2px;
@@ -34,15 +67,24 @@
       li {
         color: var(--gray-100);
         font-size: 14px;
+        font-weight: 400;
         display: flex;
         align-items: center;
 
         svg {
-          margin-right: 4px;
+          margin-right: 8px;
         }
 
         strong {
-          margin-right: 4px;
+          margin-left: 4px;
+          font-weight: 700;
+        }
+
+        &:last-child {
+          svg {
+            margin-left: -2px;
+            margin-right: 10px;
+          }
         }
 
         & + li {
@@ -82,5 +124,74 @@
         background: #b7b7b7;
       }
     }
+  }
+}
+
+.messageNotFound {
+  margin: 64px 0;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  text-align: center;
+  color: var(--yellow);
+}
+
+@media (max-width: 768px) {
+  .topInfo {
+    margin-bottom: 20px;
+
+    p {
+      font-size: 12px;
+      text-align: left;
+    }
+
+    button {
+      font-size: 12px;
+    }
+  }
+
+  .userBox {
+    flex-direction: column;
+
+    .image {
+      width: 70px;
+      height: 70px;
+      margin-right: 0;
+    }
+
+    .textBox {
+      margin-top: 16px;
+
+      h2 {
+        font-size: 20px;
+      }
+
+      ul {
+        li {
+          justify-content: center;
+        }
+      }
+    }
+
+    .buttons {
+      width: 100%;
+      margin: 16px 0 0;
+      flex-direction: row;
+      align-items: center;
+
+      button {
+        font-size: 12px;
+
+        & + button {
+          margin-top: 0;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+
+  .messageNotFound {
+    margin: 32px 0;
+    font-size: 16px;
   }
 }

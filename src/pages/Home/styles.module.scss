@@ -12,9 +12,22 @@
 
 .message {
   margin: 64px 0;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   font-weight: bold;
   text-align: center;
   color: var(--yellow);
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: calc(100vh - 112px);
+  }
+  .message {
+    font-size: 16px;
+    margin: 32px 0;
+    br {
+      display: none;
+    }
+  }
 }

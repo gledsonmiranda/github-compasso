@@ -1,6 +1,4 @@
 .container {
-  height: calc(100vh - 80px);
-  background-color: var(--gray-300);
   padding: 32px 0;
 }
 
@@ -10,15 +8,12 @@
   margin: 0px auto;
 }
 
-.messageNotFound {
-  margin: 64px 0;
-  font-size: 20px;
-  text-align: center;
-  font-weight: bold;
-  text-align: center;
-  color: var(--yellow);
-}
-
 .loading {
   margin: 64px auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 0;
+  }
 }

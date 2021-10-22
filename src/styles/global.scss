@@ -1,5 +1,6 @@
 :root {
   --gray-100: #f2f2f2;
+  --gray-150: hsl(0, 0%, 73%);
   --gray-300: #323232;
   --gray: #252525;
   --yellow: #F7B718;
@@ -13,6 +14,7 @@
 
 body, input, textarea {
   font: 400 16px 'Roboto', sans-serif;
+  background-color: var(--gray-300);
 }
 
 ul {
@@ -24,5 +26,7 @@ a {
 }
 
 button {
+  font-family: 'Roboto', sans-serif;
   cursor: pointer;
+  outline: none;
 }

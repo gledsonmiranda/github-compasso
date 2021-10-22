@@ -17,26 +17,26 @@ export function User() {
   const [isLoading, setIsLoading] = useState(true);
   const { client_id, client_secret } = gitHub;
 
-  async function getUser(username) {
-    setIsLoading(true);
-
-    await api.get(`${username}`, {
-      params: {
-        client_id,
-        client_secret
-      }
-    }).then(response => {
-      setUser(response.data);
-    }).catch(error => {
-      setUser(undefined);
-    });
-
-    setIsLoading(false);
-  }
-
   useEffect(() => {
+    const getUser = async function (username) {
+      setIsLoading(true);
+
+      await api.get(`${username}`, {
+        params: {
+          client_id,
+          client_secret
+        }
+      }).then(response => {
+        setUser(response.data);
+      }).catch(error => {
+        setUser(undefined);
+      });
+
+      setIsLoading(false);
+    }
+
     getUser(username);
-  }, [username])
+  }, [username, client_id, client_secret])
 
   return (
     <>
@@ -44,13 +44,11 @@ export function User() {
 
       <section className={styles.container}>
         <div className={styles.content}>
-          {isLoading ?
+          { isLoading ? (
             <ReactLoading className={styles.loading} color='#F7B718' width={54} type="spinningBubbles" />
-            : user ? (
-              <UserBox user={user} />
-            ) : (
-              <p className={styles.messageNotFound}>Usuário não encontrado!</p>
-            )}
+          ) : (
+            <UserBox user={user} username={username} />
+          )}
         </div>
       </section>
     </>

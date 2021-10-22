@@ -37,7 +37,7 @@ export function Header() {
                 autoFocus
                 onChange={e => setUserSearch(e.target.value)}
               />
-              <button><FiSearch size={18} /></button>
+              <button><FiSearch size={18} color="#f2f2f2" /></button>
             </div>
           </form>
         </div>

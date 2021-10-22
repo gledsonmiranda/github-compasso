@@ -9,7 +9,7 @@ export function Home() {
 
       <section className={styles.container}>
         <div className={styles.content}>
-          <p className={styles.message}>Faça uma busca pelo nome de usuário do GitHub</p>
+          <p className={styles.message}>Faça uma busca pelo nome de usuário do GitHub <br /> para listar seus repositórios</p>
         </div>
       </section>
     </>

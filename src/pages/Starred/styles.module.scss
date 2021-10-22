@@ -1,0 +1,66 @@
+.container {
+  padding: 32px 0;
+}
+
+.content {
+  max-width: 860px;
+  padding: 0 16px;
+  margin: 0px auto;
+}
+
+.loading {
+  margin: 64px auto;
+}
+
+.topInfo {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    font-size: 16px;
+    color: var(--gray-100);
+    text-align: center;
+
+    span {
+      color: var(--yellow);
+    }
+  }
+
+  button {
+    background: transparent;
+    border: 0;
+    color: var(--gray-100);
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 0;
+  }
+
+  .topInfo {
+    margin-bottom: 20px;
+
+    p {
+      font-size: 12px;
+      text-align: left;
+    }
+
+    button {
+      font-size: 12px;
+    }
+  }
+}
+
