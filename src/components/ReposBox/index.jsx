@@ -17,7 +17,7 @@ export function ReposBox ({repo}) {
   return (
     <li className={styles.repoItem}>
       <h3>{repo.name}</h3>
-      <a href={repo.html_url} title={repo.full_name} target="_blank">{repo.html_url}</a>
+      <a href={repo.html_url} title={repo.full_name} rel="noreferrer" target="_blank">{repo.html_url}</a>
       <p>{repo.description}</p>
       <div>
         <p>{repo.language}</p>
